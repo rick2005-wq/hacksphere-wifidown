@@ -246,7 +246,7 @@ button {
   padding: 0 24px 24px;
 }
 
-.severity-list > div {
+.severity-list>div {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -265,10 +265,21 @@ button {
   border-radius: 50%;
 }
 
-.critical { background: #ff5b68; }
-.high { background: #ff9f43; }
-.medium { background: #ffd166; }
-.low { background: #65e6b1; }
+.critical {
+  background: #ff5b68;
+}
+
+.high {
+  background: #ff9f43;
+}
+
+.medium {
+  background: #ffd166;
+}
+
+.low {
+  background: #65e6b1;
+}
 
 .ready-dot {
   width: 8px;
@@ -353,4 +364,144 @@ button {
   .overview-panel {
     min-height: auto;
   }
+}
+
+.findings-container {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 16px;
+  grid-column: 1 / -1;
+}
+
+.findings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.finding-card {
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.finding-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.finding-card.selected {
+  border-color: rgba(126, 255, 204, 0.4);
+  background: rgba(101, 230, 177, 0.05);
+}
+
+.finding-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.finding-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #eef5ff;
+}
+
+.finding-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.finding-badge.critical {
+  background: rgba(255, 91, 104, 0.15);
+  color: #ff5b68;
+}
+
+.finding-badge.high {
+  background: rgba(255, 159, 67, 0.15);
+  color: #ff9f43;
+}
+
+.finding-badge.medium {
+  background: rgba(255, 209, 102, 0.15);
+  color: #ffd166;
+}
+
+.finding-badge.low {
+  background: rgba(101, 230, 177, 0.15);
+  color: #65e6b1;
+}
+
+.finding-badge.informational {
+  background: rgba(130, 144, 161, 0.15);
+  color: #8290a1;
+}
+
+.finding-badge.unknown {
+  background: rgba(130, 144, 161, 0.15);
+  color: #8290a1;
+}
+
+.finding-meta {
+  font-size: 12px;
+  color: #798798;
+  display: flex;
+  gap: 16px;
+}
+
+.finding-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.finding-details-panel {
+  padding: 24px;
+}
+
+.finding-details-panel h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  color: #eef5ff;
+}
+
+.details-section {
+  margin-bottom: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.details-section h4 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #65e6b1;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.details-section p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d7e0eb;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 60px 40px;
+  text-align: center;
+  color: #8f9dad;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 14px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
 }
