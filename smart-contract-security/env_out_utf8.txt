@@ -1,0 +1,27 @@
+﻿0.11.6
+solc-select : usage: 
+solc-select [-h] 
+{install,use,versions,upgrade} 
+...
+At line:1 char:152
++ ... > env_out.txt 2>&1; 
+solc-select --version >> 
+env_out.txt 2>&1; solc-s ...
++                         ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo          :  
+   NotSpecified: (usage: solc  
+  -sel...ns,upgrade} ...:Str   
+ ing) [], RemoteException
+    + FullyQualifiedErrorId :  
+   NativeCommandError
+ 
+solc-select: error: 
+unrecognized arguments: 
+--version
+Installing solc '0.8.20'...
+Version '0.8.20' installed.
+Switched global version to 0.8.20
+solc, the solidity compiler commandline interface
+Version: 0.8.20+commit.a1b79de6.Windows.msvc
